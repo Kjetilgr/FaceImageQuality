@@ -8,11 +8,13 @@ Because of [this issue](https://github.com/pterhoer/FaceImageQuality/issues/28) 
 
 ## Installation instructions
 
+NOTE: The original code has only been tested and confirmed working on [windows](https://github.com/pterhoer/FaceImageQuality/issues/7)
+
 Clone the repository.
 
 cd into the FaceImageQuality directory.
 
-Use Anaconda to install the required packages. This can be done by creating an virtual environment via
+Use Anaconda to create a virtual environment and install the required packages
 
 ```terminal
 conda env create -f environment.yml
@@ -34,7 +36,7 @@ conda install -c conda-forge scikit-image
 conda install keras=2.2.4
 ```
 
-To show all conda environments (and to check that the environment 'serfiq' exists)
+To show all conda environments (and confirm that the environment 'serfiq' exists)
 
 ```terminal
 conda env list
@@ -56,16 +58,6 @@ python serfiq_example.py
 
 ## Known issues
 
-### Conda virtual environment issues
-
-Running the command
-
-```terminal
-conda env create -f environment.yml
-```
-
-Doesn't work on Mac or Linux
-
 ### Geforce RTX 2080 issues
 
-Using an RTX 2080 GPU can cause errors
+Using an RTX 2080 GPU may not work because of some package requirements.
