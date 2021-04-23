@@ -1,16 +1,32 @@
 # Face Image Quality Assessment
 
-NOTE: see README-old.md for the original README
+NOTE: this IQM is now added to the ["full stack repository"](https://github.com/Kjetilgr/bachelor-full-stack)
 
-This repository contains the original repository, the repository [insightface](https://github.com/deepinsight/insightface/tree/60bb5829b1d76bfcec7930ce61c41dde26413279), and the Face Recognition model [LResNet100E-IR,ArcFace@ms1m-refine-v2](https://github.com/deepinsight/insightface/wiki/Model-Zoo#31-lresnet100e-irarcfacems1m-refine-v2)
-
-Because of [this issue](https://github.com/pterhoer/FaceImageQuality/issues/28) an [older version](https://github.com/deepinsight/insightface/tree/60bb5829b1d76bfcec7930ce61c41dde26413279) of insightface is being used.
+This repository contains the [original repository](https://github.com/pterhoer/FaceImageQuality), ~~the repository [insightface](https://github.com/deepinsight/insightface/tree/60bb5829b1d76bfcec7930ce61c41dde26413279),~~ and the Face Recognition model [LResNet100E-IR,ArcFace@ms1m-refine-v2](https://github.com/deepinsight/insightface/wiki/Model-Zoo#31-lresnet100e-irarcfacems1m-refine-v2)
 
 ## Installation instructions
 
 NOTE: The original code has only been tested and confirmed working on [windows](https://github.com/pterhoer/FaceImageQuality/issues/7)
 
-Clone the repository.
+First, clone this repository.
+
+### Installing insightface
+
+To make the code run, an [old version](https://github.com/deepinsight/insightface/tree/60bb5829b1d76bfcec7930ce61c41dde26413279) of the insightface repository is required. See why in [this issue](https://github.com/pterhoer/FaceImageQuality/issues/28)
+
+Because of the file size, insightface needs to be downloaded separately.
+
+Clone the [repository](https://github.com/deepinsight/insightface)
+
+cd into the insigthface directory and reset the repository to the old commit mentioned above, using
+
+```terminal
+git reset --hard 60bb5829b1d76bfcec7930ce61c41dde26413279
+```
+
+Move the insightface directory into the FaceImageQuality directory: FaceImageQuality/insightface
+
+### Installing the required packages
 
 cd into the FaceImageQuality directory.
 
@@ -55,6 +71,8 @@ Test the IQM by running
 ```terminal
 python serfiq_example.py
 ```
+
+Be aware that it may take a few minutes for the algorithm to finish the first time you run it.
 
 ## Known issues
 
